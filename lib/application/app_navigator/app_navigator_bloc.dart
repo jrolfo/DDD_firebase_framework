@@ -15,8 +15,11 @@ part 'app_navigator_state.dart';
 
 part 'app_navigator_bloc.freezed.dart';
 
+//AppNavigator bloc this holds all the state events and logic to change between screens
+
 @injectable
 class AppNavigatorBloc extends Bloc<AppNavigatorEvent, AppNavigatorState> {
+  //This list is used to hold all the possible screens
   final List<Widget> tabs = [
     ScreenOne(),
     ScreenTwo(),

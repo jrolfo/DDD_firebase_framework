@@ -1,5 +1,6 @@
 part of 'app_navigator_bloc.dart';
 
+//States... ScreenOne selected would be the initial one
 @freezed
 abstract class AppNavigatorState with _$AppNavigatorState {
   const factory AppNavigatorState.initial({

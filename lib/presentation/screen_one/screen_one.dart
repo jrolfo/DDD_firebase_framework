@@ -6,6 +6,7 @@ import 'package:DDD_firebase_framework/application/screen_one/screen_one_form/sc
 import 'package:DDD_firebase_framework/injection.dart';
 import 'package:DDD_firebase_framework/presentation/screen_one/widgets/screen_one_form.dart';
 
+// Just a dummy screen to wrap the screenOneForm inside a bloc provider
 @lazySingleton
 class ScreenOne extends StatelessWidget {
   @override

@@ -5,6 +5,7 @@ import 'package:DDD_firebase_framework/application/app_navigator/app_navigator_b
 import 'package:DDD_firebase_framework/injection.dart';
 import 'package:DDD_firebase_framework/presentation/app_navigator/widgets/internal_app_navigator.dart';
 
+//This class is the AppNavigaotr it's a wrapper to call the bloc provider and the internalAppNavigator
 class AppNavigator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class AppNavigator extends StatelessWidget {
   }
 }
 /*
-Option without bloc
+Option without bloc this won't keep state between screen changes... you'll need to implement a List
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:DDD_firebase_framework/presentation/screen_one/screen_one.dart';
