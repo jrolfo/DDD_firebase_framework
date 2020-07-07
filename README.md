@@ -1,16 +1,10 @@
 # DDD_firebase_framework
 
-A new Flutter project.
+This project is an extension of the DDD firebase that ResoCoder created.
 
-## Getting Started
+Instead of sending the user to the Notes Widget the app sends to an InternalNavigator that is able to switch between different screens like tabs without loosing their state.
 
-This project is a starting point for a Flutter application.
+Comments in english are provided for this new piece...
 
-A few resources to get you started if this is your first Flutter project:
+Yes.. it's full of spanish comments in the ResoCoder piece... but it was just for me to understand how the framework works
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
