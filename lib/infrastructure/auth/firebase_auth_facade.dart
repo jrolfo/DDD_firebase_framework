@@ -1,3 +1,6 @@
+import 'package:DDD_firebase_framework/domain/profiles/i_profile_repository.dart';
+import 'package:DDD_firebase_framework/domain/profiles/profile.dart';
+import 'package:DDD_firebase_framework/domain/profiles/profile_failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
@@ -17,11 +20,13 @@ class FirebaseAuthFacade implements IAuthFacade {
   //Creamos 2 objetos que necesitamos para autenticar ambos vienen del paquete de firebase
   final FirebaseAuth _firebaseAuth;
   final GoogleSignIn _googleSignIn;
+  final IProfileRepository _profileRepository;
 
   //constructor
   FirebaseAuthFacade(
     this._firebaseAuth,
     this._googleSignIn,
+    this._profileRepository,
   );
   //Metodo para obtener un objeto tipo User
   @override
@@ -45,6 +50,10 @@ class FirebaseAuthFacade implements IAuthFacade {
         email: emailAddressString,
         password: passwordString,
       );
+      //Creates an empty profile object in firebase
+      //Wont work because of ValueObject validations
+      //await _profileRepository.create(Profile.empty());
+
       //si no exploto nada retorno void... ponele... right es bueno
       return right(unit);
     } on PlatformException catch (e) {
@@ -99,6 +108,26 @@ class FirebaseAuthFacade implements IAuthFacade {
       return _firebaseAuth
           .signInWithCredential(authCredential)
           .then((r) => right(unit));
+      /*
+      Logic to create a profile here... not working because of vlaueObject validations
+      await _firebaseAuth.signInWithCredential(authCredential);
+      //Try to get profile for user just signed in
+      final readFailureOrSuccess = await _profileRepository.read();
+      //Checking return
+      readFailureOrSuccess.fold(
+        (_) async {
+          //left side we have a failure
+          //trying to create the profile
+          final createFailureOrSuccess =
+              await _profileRepository.create(Profile.empty());
+          //check return
+          createFailureOrSuccess.fold(
+            (_) => left(const AuthFailure.serverError()),
+            (_) => right(unit),
+          );
+        },
+        (_) => right(unit),
+      );*/
     } on PlatformException catch (_) {
       return left(const AuthFailure.serverError());
     }

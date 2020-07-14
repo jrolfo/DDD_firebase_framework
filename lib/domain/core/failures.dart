@@ -39,4 +39,8 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
     @required T failedValue,
     @required int max,
   }) = ListTooLong<T>;
+
+  const factory ValueFailure.invalidPhoneNumber({
+    @required T failedValue,
+  }) = InvalidPhoneNumber<T>;
 }

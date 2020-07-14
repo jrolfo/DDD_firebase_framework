@@ -50,6 +50,12 @@ class _$ValueFailureTearOff {
       max: max,
     );
   }
+
+  InvalidPhoneNumber<T> invalidPhoneNumber<T>({@required T failedValue}) {
+    return InvalidPhoneNumber<T>(
+      failedValue: failedValue,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -66,6 +72,7 @@ mixin _$ValueFailure<T> {
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
+    @required Result invalidPhoneNumber(T failedValue),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -75,6 +82,7 @@ mixin _$ValueFailure<T> {
     Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
+    Result invalidPhoneNumber(T failedValue),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -85,6 +93,7 @@ mixin _$ValueFailure<T> {
     @required Result empty(Empty<T> value),
     @required Result multiline(MultiLine<T> value),
     @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -94,6 +103,7 @@ mixin _$ValueFailure<T> {
     Result empty(Empty<T> value),
     Result multiline(MultiLine<T> value),
     Result listTooLong(ListTooLong<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
     @required Result orElse(),
   });
 
@@ -194,6 +204,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
+    @required Result invalidPhoneNumber(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -201,6 +212,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return invalidEmail(failedValue);
   }
 
@@ -213,6 +225,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
+    Result invalidPhoneNumber(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -231,6 +244,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     @required Result empty(Empty<T> value),
     @required Result multiline(MultiLine<T> value),
     @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -238,6 +252,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return invalidEmail(this);
   }
 
@@ -250,6 +265,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     Result empty(Empty<T> value),
     Result multiline(MultiLine<T> value),
     Result listTooLong(ListTooLong<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -337,6 +353,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
+    @required Result invalidPhoneNumber(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -344,6 +361,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return shortPassword(failedValue);
   }
 
@@ -356,6 +374,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
+    Result invalidPhoneNumber(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -374,6 +393,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     @required Result empty(Empty<T> value),
     @required Result multiline(MultiLine<T> value),
     @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -381,6 +401,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return shortPassword(this);
   }
 
@@ -393,6 +414,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     Result empty(Empty<T> value),
     Result multiline(MultiLine<T> value),
     Result listTooLong(ListTooLong<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -489,6 +511,7 @@ class _$ExceedingLenght<T> implements ExceedingLenght<T> {
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
+    @required Result invalidPhoneNumber(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -496,6 +519,7 @@ class _$ExceedingLenght<T> implements ExceedingLenght<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return exceedingLenght(failedValue, max);
   }
 
@@ -508,6 +532,7 @@ class _$ExceedingLenght<T> implements ExceedingLenght<T> {
     Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
+    Result invalidPhoneNumber(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -526,6 +551,7 @@ class _$ExceedingLenght<T> implements ExceedingLenght<T> {
     @required Result empty(Empty<T> value),
     @required Result multiline(MultiLine<T> value),
     @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -533,6 +559,7 @@ class _$ExceedingLenght<T> implements ExceedingLenght<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return exceedingLenght(this);
   }
 
@@ -545,6 +572,7 @@ class _$ExceedingLenght<T> implements ExceedingLenght<T> {
     Result empty(Empty<T> value),
     Result multiline(MultiLine<T> value),
     Result listTooLong(ListTooLong<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -630,6 +658,7 @@ class _$Empty<T> implements Empty<T> {
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
+    @required Result invalidPhoneNumber(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -637,6 +666,7 @@ class _$Empty<T> implements Empty<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return empty(failedValue);
   }
 
@@ -649,6 +679,7 @@ class _$Empty<T> implements Empty<T> {
     Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
+    Result invalidPhoneNumber(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -667,6 +698,7 @@ class _$Empty<T> implements Empty<T> {
     @required Result empty(Empty<T> value),
     @required Result multiline(MultiLine<T> value),
     @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -674,6 +706,7 @@ class _$Empty<T> implements Empty<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return empty(this);
   }
 
@@ -686,6 +719,7 @@ class _$Empty<T> implements Empty<T> {
     Result empty(Empty<T> value),
     Result multiline(MultiLine<T> value),
     Result listTooLong(ListTooLong<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -772,6 +806,7 @@ class _$MultiLine<T> implements MultiLine<T> {
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
+    @required Result invalidPhoneNumber(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -779,6 +814,7 @@ class _$MultiLine<T> implements MultiLine<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return multiline(failedValue);
   }
 
@@ -791,6 +827,7 @@ class _$MultiLine<T> implements MultiLine<T> {
     Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
+    Result invalidPhoneNumber(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -809,6 +846,7 @@ class _$MultiLine<T> implements MultiLine<T> {
     @required Result empty(Empty<T> value),
     @required Result multiline(MultiLine<T> value),
     @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -816,6 +854,7 @@ class _$MultiLine<T> implements MultiLine<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return multiline(this);
   }
 
@@ -828,6 +867,7 @@ class _$MultiLine<T> implements MultiLine<T> {
     Result empty(Empty<T> value),
     Result multiline(MultiLine<T> value),
     Result listTooLong(ListTooLong<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -924,6 +964,7 @@ class _$ListTooLong<T> implements ListTooLong<T> {
     @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
+    @required Result invalidPhoneNumber(T failedValue),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -931,6 +972,7 @@ class _$ListTooLong<T> implements ListTooLong<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return listTooLong(failedValue, max);
   }
 
@@ -943,6 +985,7 @@ class _$ListTooLong<T> implements ListTooLong<T> {
     Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
+    Result invalidPhoneNumber(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -961,6 +1004,7 @@ class _$ListTooLong<T> implements ListTooLong<T> {
     @required Result empty(Empty<T> value),
     @required Result multiline(MultiLine<T> value),
     @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
   }) {
     assert(invalidEmail != null);
     assert(shortPassword != null);
@@ -968,6 +1012,7 @@ class _$ListTooLong<T> implements ListTooLong<T> {
     assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
     return listTooLong(this);
   }
 
@@ -980,6 +1025,7 @@ class _$ListTooLong<T> implements ListTooLong<T> {
     Result empty(Empty<T> value),
     Result multiline(MultiLine<T> value),
     Result listTooLong(ListTooLong<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -999,4 +1045,155 @@ abstract class ListTooLong<T> implements ValueFailure<T> {
   int get max;
   @override
   $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith;
+}
+
+abstract class $InvalidPhoneNumberCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $InvalidPhoneNumberCopyWith(InvalidPhoneNumber<T> value,
+          $Res Function(InvalidPhoneNumber<T>) then) =
+      _$InvalidPhoneNumberCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+class _$InvalidPhoneNumberCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $InvalidPhoneNumberCopyWith<T, $Res> {
+  _$InvalidPhoneNumberCopyWithImpl(
+      InvalidPhoneNumber<T> _value, $Res Function(InvalidPhoneNumber<T>) _then)
+      : super(_value, (v) => _then(v as InvalidPhoneNumber<T>));
+
+  @override
+  InvalidPhoneNumber<T> get _value => super._value as InvalidPhoneNumber<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(InvalidPhoneNumber<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+class _$InvalidPhoneNumber<T> implements InvalidPhoneNumber<T> {
+  const _$InvalidPhoneNumber({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.invalidPhoneNumber(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is InvalidPhoneNumber<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @override
+  $InvalidPhoneNumberCopyWith<T, InvalidPhoneNumber<T>> get copyWith =>
+      _$InvalidPhoneNumberCopyWithImpl<T, InvalidPhoneNumber<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result invalidEmail(T failedValue),
+    @required Result shortPassword(T failedValue),
+    @required Result exceedingLenght(T failedValue, int max),
+    @required Result empty(T failedValue),
+    @required Result multiline(T failedValue),
+    @required Result listTooLong(T failedValue, int max),
+    @required Result invalidPhoneNumber(T failedValue),
+  }) {
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(exceedingLenght != null);
+    assert(empty != null);
+    assert(multiline != null);
+    assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
+    return invalidPhoneNumber(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result invalidEmail(T failedValue),
+    Result shortPassword(T failedValue),
+    Result exceedingLenght(T failedValue, int max),
+    Result empty(T failedValue),
+    Result multiline(T failedValue),
+    Result listTooLong(T failedValue, int max),
+    Result invalidPhoneNumber(T failedValue),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidPhoneNumber != null) {
+      return invalidPhoneNumber(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result invalidEmail(InvalidEmail<T> value),
+    @required Result shortPassword(ShortPassword<T> value),
+    @required Result exceedingLenght(ExceedingLenght<T> value),
+    @required Result empty(Empty<T> value),
+    @required Result multiline(MultiLine<T> value),
+    @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+  }) {
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(exceedingLenght != null);
+    assert(empty != null);
+    assert(multiline != null);
+    assert(listTooLong != null);
+    assert(invalidPhoneNumber != null);
+    return invalidPhoneNumber(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result invalidEmail(InvalidEmail<T> value),
+    Result shortPassword(ShortPassword<T> value),
+    Result exceedingLenght(ExceedingLenght<T> value),
+    Result empty(Empty<T> value),
+    Result multiline(MultiLine<T> value),
+    Result listTooLong(ListTooLong<T> value),
+    Result invalidPhoneNumber(InvalidPhoneNumber<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (invalidPhoneNumber != null) {
+      return invalidPhoneNumber(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidPhoneNumber<T> implements ValueFailure<T> {
+  const factory InvalidPhoneNumber({@required T failedValue}) =
+      _$InvalidPhoneNumber<T>;
+
+  @override
+  T get failedValue;
+  @override
+  $InvalidPhoneNumberCopyWith<T, InvalidPhoneNumber<T>> get copyWith;
 }

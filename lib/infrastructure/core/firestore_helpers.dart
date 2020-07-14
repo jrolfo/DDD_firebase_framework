@@ -14,6 +14,10 @@ extension FirestoreX on Firestore {
         .collection('users')
         .document(user.id.getOrCrash());
   }
+
+  Future<CollectionReference> countriesCollection() async {
+    return Firestore.instance.collection('countries');
+  }
 }
 
 extension DocumentReferenceX on DocumentReference {

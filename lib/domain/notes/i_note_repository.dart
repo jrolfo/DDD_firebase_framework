@@ -10,6 +10,7 @@ abstract class INoteRepository {
   // Note CUD  La R son los watch
 
   Stream<Either<NoteFailure, KtList<Note>>> watchAll();
+
   Stream<Either<NoteFailure, KtList<Note>>> watchUncompleted();
   Future<Either<NoteFailure, Unit>> create(Note note);
   Future<Either<NoteFailure, Unit>> update(Note note);
